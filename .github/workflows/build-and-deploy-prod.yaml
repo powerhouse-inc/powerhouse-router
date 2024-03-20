@@ -7,7 +7,9 @@ jobs:
         environment: Production
         runs-on: ubuntu-latest
         steps:
-            - name: Build, Push and Release Router to Heroku. # Your custom step name
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Build, Push and Release Router to Heroku.
               uses: gonuit/heroku-docker-deploy@v1.3.3
               with:
                   email: ${{ secrets.HEROKU_EMAIL }}
