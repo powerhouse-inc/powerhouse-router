@@ -17,8 +17,8 @@ ENV POWERHOUSE_CONNECT_STAGING=https://connect-ph.vercel.app
 ENV ARBITRUM_CONNECT_STAGING=https://connect-arbitrum.vercel.app
 ENV MAKERDAO_CONNECT_STAGING=https://connect-ph.vercel.app
 
-ENV RENOWN=https://renown-frontend.herokuapp.com
-ENV RENOWN_STAGING=https://renown-frontend.herokuapp.com
+ENV RENOWN=https://renown.vercel.app
+ENV RENOWN_STAGING=https://renown.vercel.app
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf.template
 CMD /bin/sh -c "envsubst '\$PORT,\$POWERHOUSE_SWITCHBOARD,\$MAKERDAO_SWITCHBOARD,\$ARBITRUM_SWITCHBOARD,\$POWERHOUSE_SWITCHBOARD_STAGING,\$MAKERDAO_SWITCHBOARD_STAGING,\$ARBITRUM_SWITCHBOARD_STAGING,\$POWERHOUSE_CONNECT,\$MAKERDAO_CONNECT,\$ARBITRUM_CONNECT,\$POWERHOUSE_CONNECT_STAGING,\$MAKERDAO_CONNECT_STAGING,\$ARBITRUM_CONNECT_STAGING,\$RENOWN,\$RENOWN_STAGING' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
