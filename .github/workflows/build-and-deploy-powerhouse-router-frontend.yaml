@@ -1,0 +1,15 @@
+name: Deploy Router Frontend
+
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    environment: Production
+    runs-on: ubuntu-latest
+    steps:
+      # Check-out your repository.
+      - name: Checkout
+        uses: actions/checkout@v2
+
+
