@@ -9,13 +9,13 @@ ENV POWERHOUSE_SWITCHBOARD_STAGING=https://ph-switchboard-nginx-staging-19583bf7
 ENV ARBITRUM_SWITCHBOARD_STAGING=https://switchboard-arbitrum-ng-alpha-58b7421c3732.herokuapp.com
 ENV MAKERDAO_SWITCHBOARD_STAGING=https://makerdao-sb-nginx-alpha-e20d6399dcfa.herokuapp.com
 
-ENV POWERHOUSE_CONNECT=https://connect-ph.vercel.app
-ENV ARBITRUM_CONNECT=https://connect-arbitrum.vercel.app
-ENV MAKERDAO_CONNECT=https://connect-ph.vercel.app
+ENV POWERHOUSE_CONNECT=https://ph-connect-prod-e93926b90614.herokuapp.com
+ENV ARBITRUM_CONNECT=https://arbitrum-connect-prod-d425b844fe1c.herokuapp.com
+ENV MAKERDAO_CONNECT=https://makerdao-connect-prod-3e5baf24ce5d.herokuapp.com
 
-ENV POWERHOUSE_CONNECT_STAGING=https://connect-ph.vercel.app
-ENV ARBITRUM_CONNECT_STAGING=https://connect-arbitrum.vercel.app
-ENV MAKERDAO_CONNECT_STAGING=https://connect-ph.vercel.app
+ENV POWERHOUSE_CONNECT_STAGING=https://ph-connect-staging-8fd06680250e.herokuapp.com
+ENV ARBITRUM_CONNECT_STAGING=https://arbitrum-connect-alpha-b61a90d4196d.herokuapp.com
+ENV MAKERDAO_CONNECT_STAGING=https://makerdao-connect-alpha-d490586133d4.herokuapp.com
 
 ENV RENOWN=https://renown.vercel.app
 ENV RENOWN_STAGING=https://renown.vercel.app
