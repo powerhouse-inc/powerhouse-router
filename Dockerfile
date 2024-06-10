@@ -16,6 +16,8 @@ ENV MAKERDAO_CONNECT=https://makerdao-connect-prod-3e5baf24ce5d.herokuapp.com
 ENV POWERHOUSE_CONNECT_STAGING=https://ph-connect-staging-8fd06680250e.herokuapp.com
 ENV ARBITRUM_CONNECT_STAGING=https://arbitrum-connect-alpha-b61a90d4196d.herokuapp.com
 ENV MAKERDAO_CONNECT_STAGING=https://makerdao-connect-alpha-d490586133d4.herokuapp.com
+ENV POWERHOUSE_CONNECT_DEVELOP=https://connect-develop-980033762b6b.herokuapp.com
+ENV POWERHOUSE_SWITCHBOARD_DEVELOP=https://switchboard-develop-7728381239bd.herokuapp.com
 
 ENV RENOWN=https://renown.vercel.app
 ENV RENOWN_STAGING=https://renown.vercel.app
