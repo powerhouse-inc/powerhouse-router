@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                         <Overview name="MakerDAO" />
                         <Overview name="Arbitrum" />
                     </div>
-                    <div className="pl-16 pt-8 border-t border-gray-200">
+                    <div className="pl-16 pt-8 border-t border-gray-200 flex flex-col gap-4">
                         <div className="relative flex items-center gap-x-4">
                             <Image width="25" height="25" alt="MakerDAO" src={`/storybook.png`} className="h-8 w-8  bg-gray-50" />
                             <div className="text-sm">
@@ -60,6 +60,17 @@ const Home: NextPage = () => {
                                     <Link href={`https://powerhouse-design-system.vercel.app/`} target="_blank">
                                         <span className="absolute inset-0"></span>
                                         Design System
+                                    </Link>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="relative flex items-center gap-x-4">
+                            <Image width="25" height="25" alt="MakerDAO" src={`/storybook.png`} className="h-8 w-8  bg-gray-50" />
+                            <div className="text-sm">
+                                <p className="font-semibold text-gray-900">
+                                    <Link href={`https://document-model-libs.vercel.app/`} target="_blank">
+                                        <span className="absolute inset-0"></span>
+                                        Document Model Libs
                                     </Link>
                                 </p>
                             </div>
