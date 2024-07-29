@@ -16,7 +16,7 @@ const Home: NextPage = () => {
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Apps of Powerhouse</h2>
                         {/* <p className="mt-2 text-lg leading-8 text-gray-600">Learn how to grow your business with our expert advice.</p> */}
                     </div>
-                    <div className="grid grid-cols-3 gap-x-8 ">
+                    <div className="grid lg:grid-cols-3 gap-x-8 grid-cols-1">
                         <div className="relative flex items-center gap-x-4 px-12">
                             <Image width="32" height="32" alt="MakerDAO" src={Renown} className="h-10 w-10 rounded-full bg-gray-50" />
                             <div className="text-sm leading-6">
@@ -51,6 +51,19 @@ const Home: NextPage = () => {
                         <Overview name="Powerhouse" />
                         <Overview name="MakerDAO" />
                         <Overview name="Arbitrum" />
+                    </div>
+                    <div className="pl-16 pt-8 border-t border-gray-200">
+                        <div className="relative flex items-center gap-x-4">
+                            <Image width="25" height="25" alt="MakerDAO" src={`/storybook.png`} className="h-8 w-8  bg-gray-50" />
+                            <div className="text-sm">
+                                <p className="font-semibold text-gray-900">
+                                    <Link href={`https://powerhouse-design-system.vercel.app/`} target="_blank">
+                                        <span className="absolute inset-0"></span>
+                                        Design System
+                                    </Link>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
