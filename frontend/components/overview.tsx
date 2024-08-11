@@ -49,7 +49,7 @@ export default function Overview({ name }: { name: string }) {
                         <Image width="32" height="32" alt="MakerDAO" src={Connect} className="h-10 w-10 rounded-full bg-gray-50" />
                         <div className="text-sm">
                             <p className="font-semibold text-gray-900">
-                                <Link href={`https://apps.powerhouse.io/alpha/${name.toLocaleLowerCase()}/connect/`} target="_blank">
+                                <Link href={`https://apps.powerhouse.io/staging/${name.toLocaleLowerCase()}/connect/`} target="_blank">
                                     <span className="absolute inset-0"></span>
                                     Connect
                                 </Link>
@@ -60,7 +60,7 @@ export default function Overview({ name }: { name: string }) {
                         <Image width="32" height="32" alt="MakerDAO" src={Switchboard} className="h-10 w-10 rounded-full bg-gray-50" />
                         <div className="text-sm">
                             <p className="font-semibold text-gray-900">
-                                <Link href={`https://apps.powerhouse.io/alpha/${name.toLocaleLowerCase()}/switchboard`} target="_blank">
+                                <Link href={`https://apps.powerhouse.io/staging/${name.toLocaleLowerCase()}/switchboard`} target="_blank">
                                     <span className="absolute inset-0"></span>
                                     Switchboard
                                 </Link>
