@@ -1,4 +1,16 @@
-FROM nginx:stable
+FROM nginx:alpine
+
+# deleting the limited (no extra modules) nginx 1.26.x installation
+RUN apk del -r nginx
+
+# installing the alpine os native nginx 1.24.0 with the extra modules we need
+RUN apk add --no-cache \
+  nginx \
+  nginx-mod-http-vts \
+  nginx-mod-http-brotli \
+  nginx-mod-http-cache-purge \
+  nginx-mod-http-headers-more \
+  envsubst 
 ENV PORT=80
 
 ENV POWERHOUSE_SWITCHBOARD=https://ph-switchboard-nginx-prod-c84ebf8c6e3b.herokuapp.com
@@ -28,5 +40,5 @@ ENV PH_WEBSOCKETS_SWITCHBOARD=https://switchboard-websockets-67bbee53f604.heroku
 ENV PH_WEBSOCKETS_CONNECT=https://connect-websockets-e5404ccfe6a2.herokuapp.com/
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf.template
-CMD /bin/sh -c "envsubst '\$PORT,\$POWERHOUSE_SWITCHBOARD,\$MAKERDAO_SWITCHBOARD,\$ARBITRUM_SWITCHBOARD,\$POWERHOUSE_SWITCHBOARD_STAGING,\$MAKERDAO_SWITCHBOARD_STAGING,\$ARBITRUM_SWITCHBOARD_STAGING,\$POWERHOUSE_CONNECT,\$MAKERDAO_CONNECT,\$ARBITRUM_CONNECT,\$POWERHOUSE_CONNECT_STAGING,\$MAKERDAO_CONNECT_STAGING,\$ARBITRUM_CONNECT_STAGING,\$RENOWN,\$RENOWN_STAGING,\$FRONTPAGE,\$POWERHOUSE_ CONNECT_DEVELOP,\$POWERHOUSE_SWITCHBOARD_DEVELOP,\$PH_WEBSOCKETS_SWITCHBOARD,\$PH_WEBSOCKETS_CONNECT,\$POWERHOUSE_CONNECT_DEVELOP' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
+CMD /bin/sh -c "envsubst '\$PORT,\$POWERHOUSE_SWITCHBOARD,\$MAKERDAO_SWITCHBOARD,\$ARBITRUM_SWITCHBOARD,\$POWERHOUSE_SWITCHBOARD_STAGING,\$MAKERDAO_SWITCHBOARD_STAGING,\$ARBITRUM_SWITCHBOARD_STAGING,\$POWERHOUSE_CONNECT,\$MAKERDAO_CONNECT,\$ARBITRUM_CONNECT,\$POWERHOUSE_CONNECT_STAGING,\$MAKERDAO_CONNECT_STAGING,\$ARBITRUM_CONNECT_STAGING,\$RENOWN,\$RENOWN_STAGING,\$FRONTPAGE,\$POWERHOUSE_ CONNECT_DEVELOP,\$POWERHOUSE_SWITCHBOARD_DEVELOP,\$PH_WEBSOCKETS_SWITCHBOARD,\$PH_WEBSOCKETS_CONNECT,\$POWERHOUSE_CONNECT_DEVELOP' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/nginx.conf" && nginx -g 'daemon off;'
 
