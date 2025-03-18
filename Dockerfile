@@ -29,7 +29,7 @@ ENV POWERHOUSE_CONNECT_STAGING=https://ph-connect-staging-8fd06680250e.herokuapp
 ENV ARBITRUM_CONNECT_STAGING=https://arbitrum-connect-alpha-b61a90d4196d.herokuapp.com
 ENV MAKERDAO_CONNECT_STAGING=https://makerdao-connect-alpha-d490586133d4.herokuapp.com
 ENV POWERHOUSE_CONNECT_DEVELOP=https://connect-develop-980033762b6b.herokuapp.com
-ENV POWERHOUSE_SWITCHBOARD_DEVELOP=https://switchboard-develop-7728381239bd.herokuapp.com
+ENV POWERHOUSE_SWITCHBOARD_DEVELOP=https://switchboard-api-develop-a1d715e9ff8d.herokuapp.com
 
 ENV RENOWN=https://auth.renown.id
 ENV RENOWN_STAGING=https://auth.renown.id
